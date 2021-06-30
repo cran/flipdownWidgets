@@ -1,0 +1,214 @@
+/* THEMES */
+
+:root {
+  --base-unit: 1
+}
+
+/********** Theme: dark **********/
+/* Font styles */
+.flipdownWidgets.flipdown__theme-dark {
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: calc(var(--base-unit) * 15px);
+}
+/* Rotor group headings */
+.flipdownWidgets.flipdown__theme-dark .rotor-group-heading:before {
+  color: #000000;
+}
+/* Delimeters */
+.flipdownWidgets.flipdown__theme-dark .rotor-group:nth-child(n+2):nth-child(-n+3):before,
+.flipdownWidgets.flipdown__theme-dark .rotor-group:nth-child(n+2):nth-child(-n+3):after {
+  background-color: #151515;
+}
+/* Rotor tops */
+.flipdownWidgets.flipdown__theme-dark .rotor,
+.flipdownWidgets.flipdown__theme-dark .rotor-top,
+.flipdownWidgets.flipdown__theme-dark .rotor-leaf-front {
+  color: #FFFFFF;
+  background-color: #151515;
+}
+/* Rotor bottoms */
+.flipdownWidgets.flipdown__theme-dark .rotor-bottom,
+.flipdownWidgets.flipdown__theme-dark .rotor-leaf-rear {
+  color: #EFEFEF;
+  background-color: #202020;
+}
+/* Hinge */
+.flipdownWidgets.flipdown__theme-dark .rotor:after {
+  border-top: solid 1px #151515;
+}
+
+/********** Theme: light **********/
+/* Font styles */
+.flipdownWidgets.flipdown__theme-light {
+  font-family: sans-serif;
+  font-weight: bold;
+}
+/* Rotor group headings */
+.flipdownWidgets.flipdown__theme-light .rotor-group-heading:before {
+  color: #EEEEEE;
+}
+/* Delimeters */
+.flipdownWidgets.flipdown__theme-light .rotor-group:nth-child(n+2):nth-child(-n+3):before,
+.flipdownWidgets.flipdown__theme-light .rotor-group:nth-child(n+2):nth-child(-n+3):after {
+  background-color: #DDDDDD;
+}
+/* Rotor tops */
+.flipdownWidgets.flipdown__theme-light .rotor,
+.flipdownWidgets.flipdown__theme-light .rotor-top,
+.flipdownWidgets.flipdown__theme-light .rotor-leaf-front {
+  color: #222222;
+  background-color: #DDDDDD;
+}
+/* Rotor bottoms */
+.flipdownWidgets.flipdown__theme-light .rotor-bottom,
+.flipdownWidgets.flipdown__theme-light .rotor-leaf-rear {
+  color: #333333;
+  background-color: #EEEEEE;
+}
+/* Hinge */
+.flipdownWidgets.flipdown__theme-light .rotor:after {
+  border-top: solid 1px #222222;
+}
+
+/* END OF THEMES */
+
+.flipdownWidgets {
+  overflow: visible;
+}
+
+.flipdownWidgets .rotor-group {
+  position: relative;
+  float: left;
+  padding-right: calc(var(--base-unit) * 30px);
+}
+
+.flipdownWidgets .rotor-group:last-child {
+  padding-right: 0;
+}
+
+.flipdownWidgets .rotor-group-heading:before {
+  display: block;
+  height: calc(var(--base-unit) * 30px);
+  line-height: calc(var(--base-unit) * 30px);
+  text-align: center;
+}
+
+.flipdownWidgets .rotor-group:nth-child(1) .rotor-group-heading:before {
+  content: attr(data-before);
+}
+
+.flipdownWidgets .rotor-group:nth-child(2) .rotor-group-heading:before {
+  content: attr(data-before);
+}
+
+.flipdownWidgets .rotor-group:nth-child(3) .rotor-group-heading:before {
+  content: attr(data-before);
+}
+
+.flipdownWidgets .rotor-group:nth-child(4) .rotor-group-heading:before {
+  content: attr(data-before);
+}
+
+.flipdownWidgets .rotor-group:nth-child(n+2):nth-child(-n+3):before {
+  content: '';
+  position: absolute;
+  bottom: calc(var(--base-unit) * 20px);
+  left: calc(var(--base-unit) * 115px);
+  width: calc(var(--base-unit) * 10px);
+  height: calc(var(--base-unit) * 10px);
+  border-radius: 50%;
+}
+
+.flipdownWidgets .rotor-group:nth-child(n+2):nth-child(-n+3):after {
+  content: '';
+  position: absolute;
+  bottom: calc(var(--base-unit) * 50px);
+  left: calc(var(--base-unit) * 115px);
+  width: calc(var(--base-unit) * 10px);
+  height: calc(var(--base-unit) * 10px);
+  border-radius: 50%;
+}
+
+.flipdownWidgets .rotor {
+  position: relative;
+  float: left;
+  width: calc(var(--base-unit) * 50px);
+  height: calc(var(--base-unit) * 80px);
+  margin: 0px calc(var(--base-unit) * 5px) 0px 0px;
+  border-radius: calc(var(--base-unit) * 4px);
+  font-size: calc(var(--base-unit) * 50px);
+  text-align: center;
+  perspective: calc(var(--base-unit) * 200px);
+}
+
+.flipdownWidgets .rotor:last-child {
+  margin-right: 0;
+}
+
+.flipdownWidgets .rotor-top,
+.flipdownWidgets .rotor-bottom {
+  overflow: hidden;
+  position: absolute;
+  width: calc(var(--base-unit) * 50px);
+  height: calc(var(--base-unit) * 40px);
+}
+
+.flipdownWidgets .rotor-leaf {
+  z-index: 1;
+  position: absolute;
+  width: calc(var(--base-unit) * 50px);
+  height: calc(var(--base-unit) * 80px);
+  transform-style: preserve-3d;
+  transition: transform 0s;
+}
+
+.flipdownWidgets .rotor-leaf.flipped {
+  transform: rotateX(-180deg);
+  transition: all 0.5s ease-in-out;
+}
+
+.flipdownWidgets .rotor-leaf-front,
+.flipdownWidgets .rotor-leaf-rear {
+  overflow: hidden;
+  position: absolute;
+  width: calc(var(--base-unit) * 50px);
+  height: calc(var(--base-unit) * 40px);
+  margin: 0;
+  transform: rotateX(0deg);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.flipdownWidgets .rotor-leaf-front {
+  line-height: calc(var(--base-unit) * 80px);
+  border-radius: 4px 4px 0px 0px;
+}
+
+.flipdownWidgets .rotor-leaf-rear {
+  line-height: 0px;
+  border-radius: 0px 0px 4px 4px;
+  transform: rotateX(-180deg);
+}
+
+.flipdownWidgets .rotor-top {
+  line-height: calc(var(--base-unit) * 80px);
+  border-radius: 4px 4px 0px 0px;
+}
+
+.flipdownWidgets .rotor-bottom {
+  bottom: 0;
+  line-height: 0px;
+  border-radius: 0px 0px 4px 4px;
+}
+
+.flipdownWidgets .rotor:after {
+  content: '';
+  z-index: 2;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: calc(var(--base-unit) * 50px);
+  height: calc(var(--base-unit) * 40px);
+  border-radius: 0px 0px 4px 4px;
+}

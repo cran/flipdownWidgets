@@ -1,0 +1,11 @@
+f6a876712b9093d1165e3d6f27147e27 *DESCRIPTION
+c5457a903b69ea505bf02088c0ce3aab *LICENSE
+3b53fdb1be3ba1d09adc084cda598b24 *NAMESPACE
+2eff065b0c056037aaf5dfb1634a4a39 *R/flipdownWidgets.R
+147a1de240ac8d662729b593bab24304 *README.md
+d5376cb9bbf3873cd62c9e1c0cf9954c *inst/htmlwidgets/flipdownWidgets.js
+3930894ff5e523ec57aeff6dddae391d *inst/htmlwidgets/flipdownWidgets.yaml
+0e4637d62ac7a6a3a3df7d970f05238f *inst/htmlwidgets/lib/flipdown/flipdown.css
+f33da54fac872f72c9e15e43ef31e18c *inst/htmlwidgets/lib/flipdown/flipdown.js
+36f76d5224688726a7f777d34c78088b *man/flipdownWidgets-shiny.Rd
+d40d8ab99e31a89945e930be0338ca9f *man/flipdownWidgets.Rd
